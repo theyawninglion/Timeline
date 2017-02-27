@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 
 class Post {
-    var photoData: Data?
+    let photoData: Data?
     let timestamp: Date
     let comments: [Comment]
     
     
-    func addPhoto(photo: UIImage){
-        photoData = photo as? Data
+    var photo: UIImage? {
+        guard let data = photoData else { return nil }
+        return UIImage(data: data)
     }
     
     init(photoData: Data?, timestamp: Date = Date(), comments: [Comment] = []){

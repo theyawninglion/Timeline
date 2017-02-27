@@ -16,6 +16,7 @@
 		5AC5FCFE1E64D4B800179EBB /* AddPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5FCFD1E64D4B800179EBB /* AddPostTableViewController.swift */; };
 		5AC5FD001E64D53600179EBB /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5FCFF1E64D53600179EBB /* SearchResultsTableViewController.swift */; };
 		5AC5FD081E64D60200179EBB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5FD071E64D60200179EBB /* Post.swift */; };
+		5AC5FD0A1E64E40B00179EBB /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5FD091E64E40B00179EBB /* PostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5AC5FCFD1E64D4B800179EBB /* AddPostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostTableViewController.swift; sourceTree = "<group>"; };
 		5AC5FCFF1E64D53600179EBB /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		5AC5FD071E64D60200179EBB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		5AC5FD091E64E40B00179EBB /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		5AC5FD051E64D5DC00179EBB /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				5AC5FD091E64E40B00179EBB /* PostController.swift */,
 			);
 			name = ModelController;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				5AC5FCFA1E64D31E00179EBB /* PostListTableViewController.swift in Sources */,
 				5AC5FD001E64D53600179EBB /* SearchResultsTableViewController.swift in Sources */,
 				5AC5FD081E64D60200179EBB /* Post.swift in Sources */,
+				5AC5FD0A1E64E40B00179EBB /* PostController.swift in Sources */,
 				5AC5FCFE1E64D4B800179EBB /* AddPostTableViewController.swift in Sources */,
 				5AC5FCFC1E64D3C200179EBB /* PostDetailTableViewController.swift in Sources */,
 			);
