@@ -17,6 +17,9 @@
 		5AC5FD001E64D53600179EBB /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5FCFF1E64D53600179EBB /* SearchResultsTableViewController.swift */; };
 		5AC5FD081E64D60200179EBB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5FD071E64D60200179EBB /* Post.swift */; };
 		5AC5FD0A1E64E40B00179EBB /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5FD091E64E40B00179EBB /* PostController.swift */; };
+		5AC5FD0C1E64E58500179EBB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5FD0B1E64E58500179EBB /* Comment.swift */; };
+		5AC5FD0E1E64EB0E00179EBB /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5FD0D1E64EB0E00179EBB /* PostTableViewCell.swift */; };
+		5AC5FD101E650A3E00179EBB /* stars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AC5FD0F1E650A3E00179EBB /* stars.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		5AC5FCFF1E64D53600179EBB /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		5AC5FD071E64D60200179EBB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5AC5FD091E64E40B00179EBB /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		5AC5FD0B1E64E58500179EBB /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		5AC5FD0D1E64EB0E00179EBB /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		5AC5FD0F1E650A3E00179EBB /* stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +72,10 @@
 			children = (
 				5AC5FD061E64D5E800179EBB /* Controllers */,
 				5AC5FD051E64D5DC00179EBB /* ModelController */,
+				5AC5FD011E64D56100179EBB /* ViewController */,
 				5AC5FD041E64D5D400179EBB /* Model */,
 				5AC5FCE71E64D20D00179EBB /* AppDelegate.swift */,
 				5AC5FD021E64D57800179EBB /* View */,
-				5AC5FD011E64D56100179EBB /* ViewController */,
 				5AC5FD031E64D58A00179EBB /* Resources */,
 			);
 			path = Timeline;
@@ -89,8 +95,9 @@
 		5AC5FD021E64D57800179EBB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5AC5FCF01E64D20D00179EBB /* LaunchScreen.storyboard */,
+				5AC5FD0D1E64EB0E00179EBB /* PostTableViewCell.swift */,
 				5AC5FCEB1E64D20D00179EBB /* Main.storyboard */,
+				5AC5FCF01E64D20D00179EBB /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 			children = (
 				5AC5FCF31E64D20D00179EBB /* Info.plist */,
 				5AC5FCEE1E64D20D00179EBB /* Assets.xcassets */,
+				5AC5FD0F1E650A3E00179EBB /* stars.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				5AC5FD071E64D60200179EBB /* Post.swift */,
+				5AC5FD0B1E64E58500179EBB /* Comment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 				5AC5FCF21E64D20D00179EBB /* LaunchScreen.storyboard in Resources */,
 				5AC5FCEF1E64D20D00179EBB /* Assets.xcassets in Resources */,
 				5AC5FCED1E64D20D00179EBB /* Main.storyboard in Resources */,
+				5AC5FD101E650A3E00179EBB /* stars.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,10 +212,12 @@
 				5AC5FCE81E64D20D00179EBB /* AppDelegate.swift in Sources */,
 				5AC5FCFA1E64D31E00179EBB /* PostListTableViewController.swift in Sources */,
 				5AC5FD001E64D53600179EBB /* SearchResultsTableViewController.swift in Sources */,
+				5AC5FD0C1E64E58500179EBB /* Comment.swift in Sources */,
 				5AC5FD081E64D60200179EBB /* Post.swift in Sources */,
 				5AC5FD0A1E64E40B00179EBB /* PostController.swift in Sources */,
 				5AC5FCFE1E64D4B800179EBB /* AddPostTableViewController.swift in Sources */,
 				5AC5FCFC1E64D3C200179EBB /* PostDetailTableViewController.swift in Sources */,
+				5AC5FD0E1E64EB0E00179EBB /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

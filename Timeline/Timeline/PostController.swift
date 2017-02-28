@@ -14,7 +14,11 @@ class PostController {
     var posts: [Post] = []
     
     func createPostWith(image: UIImage, caption: String){
-        Post(photoData: <#T##Data?#>, timestamp: <#T##Date#>, comments: <#T##[Comment]#>)
+        
+//        Post(photoData: <#T##Data?#>)
     }
-    
+    func addComment(toPost: Post, text: String){
+       let comment =  Comment(text: text, post: toPost)
+        toPost.comments.append(comment)
+    }
 }

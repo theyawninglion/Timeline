@@ -12,7 +12,7 @@ import UIKit
 class Post {
     let photoData: Data?
     let timestamp: Date
-    let comments: [Comment]
+    var comments: [Comment]
     
     
     var photo: UIImage? {
@@ -25,23 +25,6 @@ class Post {
         self.timestamp = timestamp
         self.comments = comments
     }
-    
-    
-    
-}
-
-class Comment {
-    
-    let text: String
-    let timestamp:  Date
-    let post: Post
-    
-    init(text: String, timestamp: Date = Date(), post: Post){
-        self.text = text
-        self.timestamp = timestamp
-        self.post = post
-    }
-    
     
     
     

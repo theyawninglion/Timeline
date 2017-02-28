@@ -9,87 +9,80 @@
 import UIKit
 
 class PostDetailTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    
+    var post: Post?
+    
+    @IBAction func commentButtonTapped(_ sender: Any) {
+        
+        commentAlert()
+        
+    }
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+    }
+    @IBAction func followButtonTapped(_ sender: Any) {
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    
+    func commentAlert() {
+        let commentAlertController = UIAlertController(title: "Comment", message: "Add comments", preferredStyle: .alert)
+        
+        let commentTextField: UITextField?
+        
+        commentAlertController.addTextField(configurationHandler: { (textField) in
+            
+            commentTextField = textField
+        })
+        
+    
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let addCommentAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            guard let commentText = commentTextField?.text, let post  = self.post else { return }
+            PostController.sharedController.addComment(toPost: post, text: commentText)
+        }
+        
+        commentAlertController.addAction(cancelAction)
+        commentAlertController.addAction(addCommentAction)
     }
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
 
-    // MARK: - Table view data source
+            tableView.estimatedRowHeight = 250
+            
+        }
+        
+        // MARK: - Table view data source
+        
+        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return PostController.sharedController.posts.count
+        }
+    
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "postDetailCell", for: indexPath) as? PostTableViewCell ?? PostTableViewCell()
+            let post = PostController.sharedController.posts[indexPath.row]
+            
+            cell.post = post
+            
+            return cell
+        }
+        
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+        
+        // MARK: - Navigation
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
+            
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
